@@ -1,0 +1,14 @@
+{
+  "name": "maxshaw/laravel-swagger",
+  "description": "Swagger API Documentation for Laravel Project",
+  "type": "library",
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "MaxShaw\\LaravelSwagger\\": "src"
+    }
+  },
+  "require-dev": {
+    "laravel/framework": "^8.0"
+  }
+}

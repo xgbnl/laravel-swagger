@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger UI</title>
+    <link rel="stylesheet" type="text/css" href="/vendor/laravel-swagger/swagger-ui.css"/>
+    <link rel="icon" type="image/png" href="/vendor/laravel-swagger/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/vendor/laravel-swagger/favicon-16x16.png" sizes="16x16"/>
+    <style>
+        html {
+            box-sizing: border-box;
+            overflow: -moz-scrollbars-vertical;
+            overflow-y: scroll;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #fafafa;
+        }
+
+        .swagger-ui .markdown p, .swagger-ui .markdown pre, .swagger-ui .renderedMarkdown p, .swagger-ui .renderedMarkdown pre {
+            margin: .5em auto;
+        }
+
+        pre,
+        code,
+        .swagger-ui .model,
+        .swagger-ui .info .base-url,
+        .swagger-ui .parameter__type,
+        .swagger-ui .code, .swagger-ui code,
+        .swagger-ui .opblock-body pre.microlight,
+        .swagger-ui .parameter__extension, .swagger-ui .parameter__in,
+        .swagger-ui .markdown code, .swagger-ui .renderedMarkdown code,
+        .swagger-ui .opblock .opblock-summary-operation-id, .swagger-ui .opblock .opblock-summary-path, .swagger-ui .opblock .opblock-summary-path__deprecated {
+            font-family: 'Fira Code Retina', menlo, 'Courier New', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        }
+
+        .swagger-ui .model-title,
+        .swagger-ui .markdown p, .swagger-ui .renderedMarkdown p {
+            font-family: 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        }
+
+        .swagger-ui .markdown code, .swagger-ui .renderedMarkdown code {
+            padding: 2px 5px;
+            line-height: 2;
+        }
+
+        .swagger-ui .parameter__name.required:after {
+            content: "";
+            font-size: 0;
+        }
+
+        .property.primitive + .renderedMarkdown > p {
+            margin-top: 0;
+        }
+
+        .prop-enum {
+            margin-bottom: .5em;
+        }
+    </style>
+</head>
+<body>
+<div id="swagger-ui"></div>
+
+<script src="/vendor/laravel-swagger/swagger-ui-bundle.js" charset="UTF-8"></script>
+<script>
+    const token = location.href.split('?token=').slice(1)[0];
+    window.onload = function () {
+        SwaggerUIBundle({
+            url: `/api/docs/openapi${token ? '?token=' + token : ''}`,
+            dom_id: '#swagger-ui',
+            docExpansion: 'none',
+            deepLinking: true,
+            validatorUrl: null,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+            ],
+            layout: 'BaseLayout'
+        })
+    }
+</script>
+</body>
+</html>
