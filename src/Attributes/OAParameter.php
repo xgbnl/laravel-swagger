@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MaxShaw\LaravelSwagger\Attributes;
+namespace Xgbnl\LaravelSwagger\Attributes;
 
 
 abstract class OAParameter

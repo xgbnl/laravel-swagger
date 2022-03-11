@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use MaxShaw\LaravelSwagger\OperationBuilder;
+use Xgbnl\LaravelSwagger\OperationBuilder;
 
 if (defined('API_KEY_MIDDLEWARES')) {
     return;

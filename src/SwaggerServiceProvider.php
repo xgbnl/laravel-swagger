@@ -1,6 +1,6 @@
 <?php
 
-namespace MaxShaw\LaravelSwagger;
+namespace Xgbnl\LaravelSwagger;
 
 use Illuminate\Support\ServiceProvider;
 

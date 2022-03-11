@@ -1,6 +1,6 @@
 <?php
 
-namespace MaxShaw\LaravelSwagger\Attributes;
+namespace Xgbnl\LaravelSwagger\Attributes;
 
 use Attribute;
 use JetBrains\PhpStorm\Pure;
