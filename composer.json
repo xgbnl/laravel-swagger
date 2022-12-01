@@ -2,13 +2,26 @@
   "name": "xgbnl/laravel-swagger",
   "description": "Swagger API Documentation for Laravel Project",
   "type": "library",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "autoload": {
-    "psr-4": {
-      "Xgbnl\\LaravelSwagger\\": "src"
-    }
+      "psr-4": {
+          "Xgbnl\\LaravelSwagger\\": "src"
+      }
   },
   "require-dev": {
-    "laravel/framework": "^9.0"
+      "laravel/framework": "^9.0"
+  },
+  "authors": [
+      {
+          "name": "xgbnl",
+          "email": "745502274@qq.com"
+      }
+  ],
+  "extra": {
+      "laravel": {
+          "providers": [
+              "Xgbnl\\LaravelSwagger\\SwaggerServiceProvider"
+          ]
+      }
   }
 }
