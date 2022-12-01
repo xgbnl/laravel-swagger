@@ -4,10 +4,21 @@
 ```shell
 composer require xgbnl/laravel-swagger
 ```
+## mount service provider
+```php
+use Xgbnl\LaravelSwagger\SwaggerServiceProvider;
+
+  public function register()
+  {
+        if ($this->app->isLocal()) {
+            $this->app->register(SwaggerServiceProvider::class);
+        }
+  }
+```
 
 ## publish
 ```shell
-php artisan publish:swagger
+php artisan swagger:publish
 ```
 
 ## access
@@ -47,24 +58,13 @@ public function index(): JsonResponse
 }
 
 ```
-
-4. Add parameters for your patch or post method.
+5. Request class auto inject to your post or patch method
 ```php
-use Xgbnl\LaravelSwagger\Attributes\OAQueryParam;
+ // UserRequest.php
 
-#[OATag('Create Goods')]
-#[OAPathParam('name','Goods Name')]
-public function store(): JsonResponse
+public function store():JsonResponse
 {
     // do
 }
 
 ```
-
-5. Add parameters for your upload method.
-```php
-#[OAMultiPartForm('cover','Goods Cover Image')]
-public function upload(): JsonResponse
-{
-    // do
-}
