@@ -1,4 +1,4 @@
-# laravel 接口文档工具
+# laravel Swagger
 
 ## install
 ```shell
