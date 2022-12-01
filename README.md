@@ -38,9 +38,9 @@ configuire `config/laravel-swagger.php`
 ```php
 use Xgbnl\LaravelSwagger\Attributes\OAQueryParam;
 
-    #[OATag('Goods List')]
-    #[OAQueryParam('id', 'Goods ID', 'integer', true, [1001 => 'id'], '?id=1001')]
-    #[OAQueryParam('name', 'Goods Name', 'string', true, ['Iphone14' => 'name'], '?name=Iphone14')]
+#[OATag('Goods List')]
+#[OAQueryParam('id', 'Goods ID', 'integer', true, [1001 => 'id'], '?id=1001')]
+#[OAQueryParam('name', 'Goods Name', 'string', true, ['Iphone14' => 'name'], '?name=Iphone14')]
 public function index(): JsonResponse
 {
     // do
@@ -52,11 +52,19 @@ public function index(): JsonResponse
 ```php
 use Xgbnl\LaravelSwagger\Attributes\OAQueryParam;
 
-    #[OATag('Create Goods')]
-    #[OAPathParam('name','Goods Name')]
+#[OATag('Create Goods')]
+#[OAPathParam('name','Goods Name')]
 public function store(): JsonResponse
 {
     // do
 }
 
 ```
+
+5. Add parameters for your upload method.
+```php
+#[OAMultiPartForm('cover','Goods Cover Image')]
+public function upload(): JsonResponse
+{
+    // do
+}
