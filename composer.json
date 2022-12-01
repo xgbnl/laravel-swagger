@@ -16,15 +16,5 @@
           "name": "xgbnl",
           "email": "745502274@qq.com"
       }
-  ],
-  "extra": {
-      "laravel": {
-          "providers": [
-              "Xgbnl\\LaravelSwagger\\SwaggerServiceProvider"
-          ],
-          "aliases": {
-            "guard": "Xgbnl\\LaravelSwagger\\SwaggerFacade"
-          }
-      }
-  }
+  ]
 }
