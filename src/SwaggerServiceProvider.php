@@ -25,5 +25,7 @@ class SwaggerServiceProvider extends ServiceProvider
             __DIR__ . '/../config/laravel-swagger.php' => config_path('laravel-swagger.php'),
             __DIR__ . '/../resources/views'            => resource_path('views/vendor/laravel-swagger'),
         ]);
+
+        $this->commands($this->commands);
     }
 }
