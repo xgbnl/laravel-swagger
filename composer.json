@@ -21,7 +21,10 @@
       "laravel": {
           "providers": [
               "Xgbnl\\LaravelSwagger\\SwaggerServiceProvider"
-          ]
+          ],
+          "aliases": {
+            "guard": "Xgbnl\\LaravelSwagger\\SwaggerFacade"
+          }
       }
   }
 }
