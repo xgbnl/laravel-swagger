@@ -7,7 +7,7 @@ composer require xgbnl/laravel-swagger
 
 ## publish
 ```shell
-php artisan swagger:install
+php artisan publish:swagger
 ```
 
 ## access
