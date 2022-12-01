@@ -11,7 +11,7 @@ class SwaggerCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'publish:swagger';
+    protected $signature = 'swagger:publish';
 
     /**
      * The console command description.
