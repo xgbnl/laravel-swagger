@@ -11,14 +11,14 @@ class SwaggerCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'install:swagger';
+    protected $signature = 'publish:swagger';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install swagger api document';
+    protected $description = 'Install swagger api document tools';
 
     /**
      * Execute the console command.
