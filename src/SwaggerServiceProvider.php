@@ -3,9 +3,15 @@
 namespace Xgbnl\LaravelSwagger;
 
 use Illuminate\Support\ServiceProvider;
+use Xgbnl\LaravelSwagger\Command\SwaggerCommand;
 
 class SwaggerServiceProvider extends ServiceProvider
 {
+
+    protected array $commands = [
+        SwaggerCommand::class,
+    ];
+
     public function boot()
     {
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
